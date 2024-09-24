@@ -3,13 +3,16 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        // Scanner scan = new Scanner(System.in);
-        // System.out.print("Введите число: ");
-        // int n = scan.nextInt();
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int n = scan.nextInt();
         // int fact = factorial(n);
         // System.out.println("Факториал числа " + n + " равен " + fact);
 
-        printEvenNums();
+        // printEvenNums();
+
+        int summ = sumDigits(n);
+        System.out.println("Сумма цифр числа " + n + " равна " + summ);
 
     }
 
@@ -32,5 +35,16 @@ public class App {
             System.out.println(i);
         }
 
+    }
+
+    public static int sumDigits(int n) {
+        
+        int result = 0;
+        while(n != 0) {
+            result += n % 10;
+            n /= 10;
+        }
+
+        return(result);
     }
 }

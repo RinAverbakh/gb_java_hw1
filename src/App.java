@@ -3,11 +3,13 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Введите число: ");
-        int n = scan.nextInt();
-        int fact = factorial(n);
-        System.out.println("Факториал числа " + n + " равен " + fact);
+        // Scanner scan = new Scanner(System.in);
+        // System.out.print("Введите число: ");
+        // int n = scan.nextInt();
+        // int fact = factorial(n);
+        // System.out.println("Факториал числа " + n + " равен " + fact);
+
+        printEvenNums();
 
     }
 
@@ -22,5 +24,13 @@ public class App {
         }
 
         return(result);
+    }
+
+    public static void printEvenNums() {
+
+        for (int i = 0; i <= 100; i += 2) {
+            System.out.println(i);
+        }
+
     }
 }

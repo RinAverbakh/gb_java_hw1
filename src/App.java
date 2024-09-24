@@ -4,23 +4,39 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         Scanner scan = new Scanner(System.in);
-        // System.out.print("Введите число: ");
-        // int n = scan.nextInt();
-        // int fact = factorial(n);
-        // System.out.println("Факториал числа " + n + " равен " + fact);
 
-        // printEvenNums();
+        while(true){
+            System.out.print("1 Найти факториал числа \n2 Вывести все чётные числа от 0 до 100 \n3 Найти сумму цифр числа \n4 Найти большее из трёх чисел \nВыберите номер задачи или введите 0 для выхода: ");
+            int act = scan.nextInt();
 
-        // int summ = sumDigits(n);
-        // System.out.println("Сумма цифр числа " + n + " равна " + summ);
+            if(act == 1) {
+                System.out.print("Введите число: ");
+                int n = scan.nextInt();
+                int fact = factorial(n);
+                System.out.println("Факториал числа " + n + " равен " + fact);
+            }
 
-        System.out.print("Введите первое число: ");
-        int а = scan.nextInt();
-        System.out.print("Введите второе число: ");
-        int b = scan.nextInt();
-        System.out.print("Введите третье число: ");
-        int c = scan.nextInt();
-        System.out.println("Большим является число " + findMaxOfThree(а, b, c));
+            if(act == 2) printEvenNums();
+
+            if(act == 3) {
+                System.out.print("Введите число: ");
+                int n = scan.nextInt();
+                int summ = sumDigits(n);
+                System.out.println("Сумма цифр числа " + n + " равна " + summ);
+            }
+
+            if(act == 4) {
+                System.out.print("Введите первое число: ");
+                int а = scan.nextInt();
+                System.out.print("Введите второе число: ");
+                int b = scan.nextInt();
+                System.out.print("Введите третье число: ");
+                int c = scan.nextInt();
+                System.out.println("Большим является число " + findMaxOfThree(а, b, c));
+            }
+            
+            if(act == 0) System.exit(0);
+        }
 
     }
 
